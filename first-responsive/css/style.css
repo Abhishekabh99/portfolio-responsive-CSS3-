@@ -1,0 +1,107 @@
+/* alternate way to import sryle instead of using link tag in html file*/
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap'); */
+
+/*Applly below style to all elements in the page */
+*{
+
+    font-family: 'Raleway', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /* avoids the box model issue and makes sure the width of the container you provide does not get streched if you margin padding border to the container.*/
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize; /* make the 1st letter to be capital */
+    overflow: hidden; /*clip off the extra text that is going out of the box*/
+    scroll-behavior: smooth; 
+}
+
+
+/* style the menu section */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* background: rgb(108, 214, 108); */
+    height: 65px;
+    z-index: 100; /*header menu items should be always raised like a 3D view*/
+}
+.header .nav_bar{
+    display: flex;
+}
+.header .nav_bar a{
+    flex: 1;
+    text-align: center;
+    font-size: 22px;
+    line-height: 65px;
+    color: aliceblue;
+}
+/*apply hover and change the brightness */
+.header .nav_bar a:hover {
+    filter: brightness(0.8);
+}
+
+/* apply different background color on each achor menu item */
+.header .nav_bar a:nth-child(1) {
+background-color: red; 
+}
+.header .nav_bar a:nth-child(2) {
+background-color: rgb(7, 248, 176); 
+}
+.header .nav_bar a:nth-child(3) {
+background-color: rgb(153, 48, 139); 
+}
+.header .nav_bar a:nth-child(4) {
+background-color: rgb(255, 166, 0); 
+}
+.header .nav_bar a:nth-child(5) {
+background-color: rgb(54, 224, 230); 
+}
+ 
+/*Style the main body section */
+
+.container {
+    display: flex;
+    width: 500%;
+    height: 100vh;
+
+}
+
+.container .main-section{
+    display: flex;
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 8vw;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+font-weight: bold;
+color: azure;
+}
+
+.container .main-section:nth-child(1) {
+    background-color: red; 
+    }
+    .container .main-section:nth-child(2) {
+    background-color: rgb(7, 248, 176); 
+    }
+    .container .main-section:nth-child(3) {
+    background-color: rgb(153, 48, 139); 
+    }
+    .container .main-section:nth-child(4) {
+    background-color: rgb(255, 166, 0); 
+    }
+    .container .main-section:nth-child(5) {
+    background-color: rgb(54, 224, 230); 
+    }
+     
+/* Apply Media Queries */ 
+
+@media (max-width: 750px)
+{
+    .header .nav-bar a span{
+        display: none;
+    }
+}
